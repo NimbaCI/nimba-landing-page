@@ -45,8 +45,11 @@ html {
   scroll-behavior: smooth;
   background-color: #f9fafb;
 
-  * {
+  body {
     background-color: #f9fafb;
+  }
+
+  * {
     font-family: 'IBM Plex', sans-serif !important;
   }
 }
