@@ -8,6 +8,7 @@ import HomePage from './pages/home';
 import common_fr from './intl/fr.json';
 import common_en from './intl/en.json';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 
 i18next.init({

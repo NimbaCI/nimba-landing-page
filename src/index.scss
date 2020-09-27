@@ -1,5 +1,52 @@
-.global {
-  .page-title {
 
+@font-face {
+  font-family: 'IBM Plex';
+  src: url(./fonts/IBMPlexSans-Regular.ttf);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex';
+  src: url(./fonts/IBMPlexSans-Bold.ttf);
+  font-display: swap;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'IBM Plex';
+  src: url(./fonts/IBMPlexSans-BoldItalic.ttf);
+  font-display: swap;
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'IBM Plex';
+  src: url(./fonts/IBMPlexSans-Light.ttf);
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'IBM Plex';
+  src: url(./fonts/IBMPlexSans-Medium.ttf);
+  font-display: swap;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'IBM Plex';
+  src: url(./fonts/IBMPlexSans-SemiBold.ttf);
+  font-display: swap;
+  font-weight: 600;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #f9fafb;
+
+  * {
+    background-color: #f9fafb;
+    font-family: 'IBM Plex', sans-serif !important;
   }
 }
