@@ -4,6 +4,11 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt';
 
 import figmaSrc from '../../images/figma.png';
 
@@ -62,8 +67,43 @@ const Home = () => {
 
         <div className='section-2-content'>
           <h2>Africa's gift to the world</h2>
-        </div>
+          <p className='intro'>The most advanced git solution from the African continent</p>
 
+          <div className='advantages'>
+            <Row>
+              <Col sm='6' className='advantages-col'>
+                <div className='inner-column'>
+                  <div className='icon'>
+                    <FontAwesomeIcon icon={faGithub} />
+                  </div>
+                </div>
+                <div className='inner-column'>
+                  <h3>Transfer from GitHub or Gitlab</h3>
+                  <p>At Nimba, we understand that you have been using other platforms because they work great, but also because you had no choice! Now that you do, it is time to transfer everything to Nimba.</p>
+                </div>
+              </Col>
+              <Col sm='6' className='advantages-col'>
+                <div className='inner-column'>
+                  <div className='icon'>
+                    <FontAwesomeIcon icon={faBolt} />
+                  </div>
+                </div>
+                <div className='inner-column'>
+                  <h3>Host your project's like anywhere else</h3>
+                  <p>We really wanted to craft a solution that did not make our users feel like they were downgrading by using a service from Africa, so Nimba is as powerful as any other Git client.</p>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col sm='6'>
+
+              </Col>
+              <Col sm='6'>
+
+              </Col>
+            </Row>
+          </div>
+        </div>
       </div>
     </div>
   );
