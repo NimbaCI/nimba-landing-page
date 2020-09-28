@@ -9,6 +9,8 @@ import Col from 'react-bootstrap/Col';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt';
+import { faHandHoldingUsd } from '@fortawesome/free-solid-svg-icons/faHandHoldingUsd';
+import { faToolbox } from '@fortawesome/free-solid-svg-icons/faToolbox';
 
 import figmaSrc from '../../images/figma.png';
 
@@ -90,19 +92,46 @@ const Home = () => {
                 </div>
                 <div className='inner-column'>
                   <h3>Host your project's like anywhere else</h3>
-                  <p>We really wanted to craft a solution that did not make our users feel like they were downgrading by using a service from Africa, so Nimba is as powerful as any other Git client.</p>
+                  <p>We really wanted to craft a solution that did not make our users feel like they were downgrading by using a service from Africa, so Nimba is as powerful and fast as any other Git client.</p>
                 </div>
               </Col>
             </Row>
             <Row>
-              <Col sm='6'>
-
+              <Col sm='6' className='advantages-col'>
+                <div className='inner-column'>
+                  <div className='icon'>
+                    <FontAwesomeIcon icon={faHandHoldingUsd} />
+                  </div>
+                </div>
+                <div className='inner-column'>
+                  <h3>We give back to the community</h3>
+                  <p>Nimba pledged to help the community here in Africa. The basic service is free, but if you need more and decide to go Premium, 50% of your membership fee will be used to educate the community about Tech.</p>
+                </div>
               </Col>
-              <Col sm='6'>
-
+              <Col sm='6' className='advantages-col'>
+                <div className='inner-column'>
+                  <div className='icon'>
+                    <FontAwesomeIcon icon={faToolbox} />
+                  </div>
+                </div>
+                <div className='inner-column'>
+                  <h3>Connect with your preferred services</h3>
+                  <p>Using Trello ? Slack ? Heroku ? Others ? Nimba allows you to connect to your preferred productivity or tech tools and better manage your projects.</p>
+                </div>
               </Col>
             </Row>
           </div>
+        </div>
+      </div>
+
+      <div className='section-3'>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#152715" fill-opacity="1" d="M0,256L80,234.7C160,213,320,171,480,170.7C640,171,800,213,960,240C1120,267,1280,277,1360,282.7L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+        </svg>
+
+        <div className='section-3-content'>
+          <div className='grid-item-1'>1</div>
+          <div className='grid-item-2'>2</div>
         </div>
       </div>
     </div>

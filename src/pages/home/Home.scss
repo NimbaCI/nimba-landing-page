@@ -51,6 +51,7 @@
     width: 80%;
     display: block;
     margin: auto;
+    border-radius: 15px;
     box-shadow: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
   }
 
@@ -60,6 +61,7 @@
 
     .section-2-content {
       background-color: #264726;
+      color: #152715;
 
       h2 {
         color: #fff;
@@ -75,7 +77,7 @@
         width: 80%;
         display: block;
         margin: auto;
-        margin-top: 2.5rem;
+        margin-top: 5rem;
 
         .advantages-col {
           padding: 0;
@@ -105,10 +107,20 @@
 
             p {
               color: #bebebe;
+              padding-bottom: 50px;
+              padding-right: 20px;
             }
           }
         }
       }
+    }
+  }
+
+  .section-3 {
+    background-color: #264726;
+
+    .section-3-content {
+      background-color: #264726;
     }
   }
 }
