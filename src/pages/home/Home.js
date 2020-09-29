@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
@@ -19,22 +18,22 @@ import './Home.scss';
 const Home = () => {
   return (
     <div id='home-page'>
-      <Container>
+      <div className='nav-container'>
         <Navbar collapseOnSelect expand="lg">
-          <Navbar.Brand href="#home">⛰ Nimba</Navbar.Brand>
+          <Navbar.Brand href="/">⛰ Nimba</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
             </Nav>
             <Nav>
               <Nav.Link href="/">Platform</Nav.Link>
-              <Nav.Link href="#">Team</Nav.Link>
-              <Nav.Link eventKey={2} href="#">Pricing</Nav.Link>
-              <Nav.Link href="#">FAQ</Nav.Link>
+              <Nav.Link className='disabled-link' disabled href="#">Team</Nav.Link>
+              <Nav.Link className='disabled-link' disabled href="#">Pricing</Nav.Link>
+              <Nav.Link className='disabled-link' disabled href="#">FAQ</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-      </Container>
+      </div>
 
       <div className='section-1'>
         <h1>Git from the <span>motherland</span></h1>
@@ -42,7 +41,7 @@ const Home = () => {
         <h2>Nimba is a <b>git client</b> made in the heart of Africa, that gives back to the community.</h2>
 
         <div className='form-container'>
-          <p>Nimba is currently in beta, subscribe to be notified.</p>
+          <p>Nimba is currently in alpha, subscribe to be notified.</p>
 
           <Form className='form'>
             <Form.Row className="align-items-center">
@@ -130,8 +129,74 @@ const Home = () => {
         </svg>
 
         <div className='section-3-content'>
-          <div className='grid-item-1'>1</div>
-          <div className='grid-item-2'>2</div>
+          <div className='grid'>
+            <div className='first-grid-components'>
+              <div className='grid-item grid-item-1'>
+                <div>
+                  <h4>PRODUCTS</h4>
+                  <ul>
+                    <li><a href='/'>Platform</a></li>
+                    <li>Add-ons</li>
+                    <li>Teams</li>
+                    <li>Enterprise</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>RESOURCES</h4>
+                  <ul>
+                    <li>Pricing</li>
+                    <li>FAQ</li>
+                    <li>Documentation</li>
+                    <li>Developers</li>
+                  </ul>
+                </div>
+              </div>
+              <div className='grid-item grid-item-2'>
+                <div>
+                  <h4>COMPANY</h4>
+                  <ul>
+                    <li>About</li>
+                    <li>Blog</li>
+                    <li>Referral Program</li>
+                    <li className='help-community'>Help the community 👫</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>LEGAL</h4>
+                  <ul>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                    <li>Acceptable Use</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className='grid-item-3'>
+              <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+              <p>The latest news, articles, and resources, sent to your inbox weekly.</p>
+
+              <Form className='newsletter-form'>
+                <Form.Row className="align-items-center">
+                  <div className="left-input">
+                    <Form.Label htmlFor="inlineFormInputEmail" srOnly>
+                      Email
+                    </Form.Label>
+                    <Form.Control id="inlineFormInputEmail" placeholder="jane.doe@example.com" disabled />
+                  </div>
+                  <div className="right-button">
+                    <Button disabled variant="success" type="submit">Subscribe</Button>
+                  </div>
+                </Form.Row>
+              </Form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className='footer'>
+        <div className='footer-content'>
+          <div>Copyright © Nimba | All right reserved.</div>
+          <div>Made with  🧡in Abidjan.</div>
         </div>
       </div>
     </div>
