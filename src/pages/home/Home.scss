@@ -1,4 +1,9 @@
 #home-page {
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   .nav-container {
     margin: auto;
     width: 95%;
@@ -135,8 +140,6 @@
 
         .first-grid-components {
           display: grid;
-          grid-column: span 2/span 2;
-          grid-template-columns: repeat(2,minmax(0,1fr));
         }
 
         .grid-item {
@@ -220,8 +223,92 @@
   }
 }
 
+@media (max-width: 415px) {
+  #home-page {
+    .nav-container {
+      width: 95%;
+    }
+
+    .figma-img {
+      width: 95%;
+    }
+
+    .section-1 {
+      width: 95% !important;
+
+      h1 {
+        font-size: 3rem;
+        margin-top: 1em;
+      }
+
+      .form-container {
+        .form {
+          width: 95% !important;
+
+          .left-input {
+            width: 100% !important;
+          }
+
+          .right-button {
+            width: 100% !important;
+
+            button {
+              width: 100% !important;
+              margin-top: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    .section-2 {
+      .section-2-content {
+        .advantages {
+          width: 95%;
+        }
+      }
+    }
+
+    .section-3 {
+      .section-3-content {
+        .grid {
+          width: 95%;
+
+          .newsletter-form {
+            width: 95%;
+            margin: auto;
+
+            .left-input {
+              width: 100%;
+            }
+
+            .right-button {
+              width: 100%;
+              margin-top: 1em;
+
+              button {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer {
+      .footer-content {
+        width: 95%;
+      }
+    }
+  }
+}
+
 @media (max-width: 769px) {
   #home-page {
+    h3 {
+      font-size: 1.125rem;
+    }
+
     .section-1 {
       width: 70%;
       margin: auto;
@@ -236,6 +323,21 @@
 
           .right-button {
             width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #home-page {
+    .section-3 {
+      .section-3-content {
+        .grid {
+          .first-grid-components {
+            grid-column: span 2/span 2;
+            grid-template-columns: repeat(2,minmax(0,1fr));
           }
         }
       }
