@@ -15,7 +15,7 @@ import figmaSrc from '../../images/figma.png';
 
 import './Home.scss';
 
-const Home = () => {
+const Home = ({ email, handleFormChange, onEmailFormSubmit }) => {
   return (
     <div id='home-page'>
       <div className='nav-container'>
@@ -43,13 +43,13 @@ const Home = () => {
         <div className='form-container'>
           <p>Nimba is currently in alpha, subscribe to be notified.</p>
 
-          <Form className='form'>
+          <Form className='form' onSubmit={onEmailFormSubmit}>
             <Form.Row className="align-items-center">
               <div className="left-input">
                 <Form.Label htmlFor="inlineFormInputEmail" srOnly>
                   Email
                 </Form.Label>
-                <Form.Control id="inlineFormInputEmail" placeholder="jane.doe@example.com" />
+                <Form.Control id="inlineFormInputEmail" value={email} onChange={handleFormChange} placeholder="jane.doe@example.com" />
               </div>
               <div className="right-button">
                 <Button variant="success" type="submit">Notify me!</Button>
