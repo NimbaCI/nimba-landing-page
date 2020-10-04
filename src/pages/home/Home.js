@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Toast from 'react-bootstrap/Toast';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt';
@@ -15,7 +16,7 @@ import figmaSrc from '../../images/figma.png';
 
 import './Home.scss';
 
-const Home = ({ email, handleFormChange, onEmailFormSubmit }) => {
+const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, toggleShowToast, showToast }) => {
   return (
     <div id='home-page'>
       <div className='nav-container'>
@@ -49,7 +50,13 @@ const Home = ({ email, handleFormChange, onEmailFormSubmit }) => {
                 <Form.Label htmlFor="inlineFormInputEmail" srOnly>
                   Email
                 </Form.Label>
-                <Form.Control id="inlineFormInputEmail" value={email} onChange={handleFormChange} placeholder="jane.doe@example.com" />
+                <Form.Control
+                  id="inlineFormInputEmail"
+                  value={email}
+                  isInvalid={errorEmail}
+                  onChange={handleFormChange}
+                  placeholder="jane.doe@example.com"
+                />
               </div>
               <div className="right-button">
                 <Button variant="success" type="submit">Notify me!</Button>
@@ -199,6 +206,23 @@ const Home = ({ email, handleFormChange, onEmailFormSubmit }) => {
           <div>Made with  🧡in Abidjan.</div>
         </div>
       </div>
+
+      <Toast
+        style={{
+          position: 'absolute',
+          bottom: 10,
+          right: 10,
+        }}
+        onClose={toggleShowToast}
+        show={showToast}
+        delay={3000}
+        autohide
+      >
+        <Toast.Header>
+          <strong className="mr-auto">⛰ Nimba</strong>
+        </Toast.Header>
+        <Toast.Body>Email saved ✅</Toast.Body>
+      </Toast>
     </div>
   );
 };
