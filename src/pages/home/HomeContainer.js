@@ -7,6 +7,7 @@ const HomeContainer = () => {
   const [email, setEmail] = useState('');
   const [errorEmail, setErrorEmail] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const toggleShowToast = () => setShowToast(!showToast);
 
@@ -16,7 +17,9 @@ const HomeContainer = () => {
     if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))) {
       setErrorEmail(true);
     } else {
+      setIsLoading(true);
       await saveEmail(email);
+      setIsLoading(false);
       toggleShowToast();
       setEmail('');
     }
@@ -36,6 +39,7 @@ const HomeContainer = () => {
     <Home
       email={email}
       errorEmail={errorEmail}
+      isLoading={isLoading}
       toggleShowToast={toggleShowToast}
       showToast={showToast}
       handleFormChange={handleFormChange}

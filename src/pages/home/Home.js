@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Toast from 'react-bootstrap/Toast';
+import Spinner from 'react-bootstrap/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faBolt } from '@fortawesome/free-solid-svg-icons/faBolt';
@@ -16,7 +17,7 @@ import figmaSrc from '../../images/figma.png';
 
 import './Home.scss';
 
-const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, toggleShowToast, showToast }) => {
+const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoading, toggleShowToast, showToast }) => {
   return (
     <div id='home-page'>
       <div className='nav-container'>
@@ -59,7 +60,14 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, toggleSh
                 />
               </div>
               <div className="right-button">
-                <Button variant="success" type="submit">Notify me!</Button>
+                <Button variant="success" type="submit" disabled={isLoading}>
+                  {isLoading ?
+                    <Spinner animation="border" role="status" size="sm">
+                      <span className="sr-only">Loading...</span>
+                    </Spinner> :
+                    'Notify me!'
+                  }
+                </Button>
               </div>
             </Form.Row>
           </Form>
