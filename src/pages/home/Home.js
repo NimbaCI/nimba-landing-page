@@ -29,8 +29,8 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
             </Nav>
             <Nav>
               <Nav.Link href="/">Platform</Nav.Link>
-              <Nav.Link className='disabled-link' disabled href="#">Team</Nav.Link>
-              <Nav.Link className='disabled-link' disabled href="#">Pricing</Nav.Link>
+              <Nav.Link className='disabled-link' disabled href="#">Équipe</Nav.Link>
+              <Nav.Link className='disabled-link' disabled href="#">Prix</Nav.Link>
               <Nav.Link className='disabled-link' disabled href="#">FAQ</Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -38,12 +38,12 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
       </div>
 
       <div className='section-1'>
-        <h1>Git from the <span>motherland</span></h1>
+        <h1>Git en <span>Afrique</span> 🌍</h1>
 
-        <h2>Nimba is a <b>git client</b> made in the heart of Africa, that gives back to the community.</h2>
+        <h2>Nimba est un <b>client git</b> créé au coeur de l'Afrique, qui s'occupe de la communité.</h2>
 
         <div className='form-container'>
-          <p>Nimba is currently in alpha, subscribe to be notified.</p>
+          <p>Nimba est en version alpha, inscrivez-vous pour être tenu au courant.</p>
 
           <Form className='form' onSubmit={onEmailFormSubmit}>
             <Form.Row className="align-items-center">
@@ -63,9 +63,9 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
                 <Button variant="success" type="submit" disabled={isLoading}>
                   {isLoading ?
                     <Spinner animation="border" role="status" size="sm">
-                      <span className="sr-only">Loading...</span>
+                      <span className="sr-only">Chargement...</span>
                     </Spinner> :
-                    'Notify me!'
+                    "Je m'inscrire !"
                   }
                 </Button>
               </div>
@@ -82,8 +82,8 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
         </svg>
 
         <div className='section-2-content'>
-          <h2>Africa's gift to the world</h2>
-          <p className='intro'>The most advanced git solution from the African continent</p>
+          <h2>Un cadeau de l'Afrique pour le monde</h2>
+          <p className='intro'>La plateforme git la plus avancée du continent</p>
 
           <div className='advantages'>
             <Row>
@@ -94,8 +94,8 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
                   </div>
                 </div>
                 <div className='inner-column'>
-                  <h3>Transfer from GitHub or Gitlab</h3>
-                  <p>At Nimba, we understand that you have been using other platforms because they work great, but also because you had no choice! Now that you do, it is time to transfer everything to Nimba.</p>
+                  <h3>Migration depuis GitHub ou Gitlab</h3>
+                  <p>Chez Nimba, nous comprenons que vous utilisiez d'autres plateformes parce qu'elles fonctionnent très bien, mais aussi parce que vous n'aviez pas le choix! Maintenant que vous avez le choix, il est temps de nous faire confiance.</p>
                 </div>
               </Col>
               <Col sm='6' className='advantages-col'>
@@ -105,8 +105,8 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
                   </div>
                 </div>
                 <div className='inner-column'>
-                  <h3>Host your project's like anywhere else</h3>
-                  <p>We really wanted to craft a solution that did not make our users feel like they were downgrading by using a service from Africa, so Nimba is as powerful and fast as any other Git client.</p>
+                  <h3>Hébergez votre projet comme partout ailleurs</h3>
+                  <p>Nous voulions vraiment créer une solution qui ne donne pas l'impression à nos utilisateurs de perdre en performance en utilisant un service africain, donc Nimba est aussi puissant et rapide que n'importe quel autre client Git.</p>
                 </div>
               </Col>
             </Row>
@@ -118,8 +118,8 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
                   </div>
                 </div>
                 <div className='inner-column'>
-                  <h3>We give back to the community</h3>
-                  <p>Nimba pledged to help the community here in Africa. The basic service is free, but if you need more and decide to go Premium, 50% of your membership fee will be used to educate the community about Tech.</p>
+                  <h3>Nous redonnons à la communauté</h3>
+                  <p>Nimba s'est engagé à aider la communauté ici en Afrique. Le service de base est gratuit, mais si vous avez besoin de plus et décidez de devenir Premium, 50% de votre cotisation sera utilisé pour éduquer la communauté sur la technologie.</p>
                 </div>
               </Col>
               <Col sm='6' className='advantages-col'>
@@ -129,8 +129,8 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
                   </div>
                 </div>
                 <div className='inner-column'>
-                  <h3>Connect with your preferred services</h3>
-                  <p>Using Trello ? Slack ? Heroku ? Others ? Nimba allows you to connect to your preferred productivity or tech tools and better manage your projects.</p>
+                  <h3>Connectez-vous avec vos services préférés</h3>
+                  <p>Vous utilisez Trello ? Slack ? Heroku ? D'autres ? Nimba vous permet de vous connecter à vos outils de productivité ou technologiques préférés et de mieux gérer vos projets.</p>
                 </div>
               </Col>
             </Row>
@@ -148,32 +148,32 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
             <div className='first-grid-components'>
               <div className='grid-item grid-item-1'>
                 <div>
-                  <h4>PRODUCTS</h4>
+                  <h4>PRODUITS</h4>
                   <ul>
-                    <li><a href='/'>Platform</a></li>
+                    <li><a href='/'>Platforme</a></li>
                     <li>Add-ons</li>
                     <li>Teams</li>
                     <li>Enterprise</li>
                   </ul>
                 </div>
                 <div>
-                  <h4>RESOURCES</h4>
+                  <h4>RESSOURCES</h4>
                   <ul>
-                    <li>Pricing</li>
+                    <li>Prix</li>
                     <li>FAQ</li>
                     <li>Documentation</li>
-                    <li>Developers</li>
+                    <li>Développeurs</li>
                   </ul>
                 </div>
               </div>
               <div className='grid-item grid-item-2'>
                 <div>
-                  <h4>COMPANY</h4>
+                  <h4>ENTREPRISE</h4>
                   <ul>
-                    <li>About</li>
+                    <li>À propos</li>
                     <li>Blog</li>
-                    <li>Referral Program</li>
-                    <li className='help-community'>Help the community 👫</li>
+                    <li>Recommandations</li>
+                    <li className='help-community'>Aider la communauté 👫</li>
                   </ul>
                 </div>
                 <div>
@@ -187,8 +187,8 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
               </div>
             </div>
             <div className='grid-item-3'>
-              <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
-              <p>The latest news, articles, and resources, sent to your inbox weekly.</p>
+              <h4>INSCRIVEZ-VOUS À NOTRE NEWSLETTER</h4>
+              <p>Les dernières nouvelles, articles et ressources, envoyés chaque semaine dans votre boîte de réception.</p>
 
               <Form className='newsletter-form'>
                 <Form.Row className="align-items-center">
@@ -199,7 +199,7 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
                     <Form.Control id="inlineFormInputEmail" placeholder="jane.doe@example.com" disabled />
                   </div>
                   <div className="right-button">
-                    <Button disabled variant="success" type="submit">Subscribe</Button>
+                    <Button disabled variant="success" type="submit">S'inscrire</Button>
                   </div>
                 </Form.Row>
               </Form>
@@ -211,7 +211,7 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
       <div className='footer'>
         <div className='footer-content'>
           <div>Copyright © Nimba | All right reserved.</div>
-          <div>Made with  🧡in Abidjan.</div>
+          <div>Fait avec 🧡depuis Abidjan.</div>
         </div>
       </div>
 
@@ -229,7 +229,7 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
         <Toast.Header>
           <strong className="mr-auto">⛰ Nimba</strong>
         </Toast.Header>
-        <Toast.Body>Email saved ✅</Toast.Body>
+        <Toast.Body>Email enregistré ✅</Toast.Body>
       </Toast>
     </div>
   );
