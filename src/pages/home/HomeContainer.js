@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { saveEmail } from '../../services/emails';
+import { ping as pingServer } from '../../services/ping';
 import Home from './Home';
 
 const HomeContainer = () => {
@@ -8,6 +9,10 @@ const HomeContainer = () => {
   const [errorEmail, setErrorEmail] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    pingServer();
+  }, []);
 
   const toggleShowToast = () => setShowToast(!showToast);
 
