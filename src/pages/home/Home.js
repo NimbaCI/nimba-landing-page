@@ -28,7 +28,7 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
             <Nav className="mr-auto">
             </Nav>
             <Nav>
-              <Nav.Link href="/">Platform</Nav.Link>
+              <Nav.Link href="/">Platforme</Nav.Link>
               <Nav.Link className='disabled-link' disabled href="#">Équipe</Nav.Link>
               <Nav.Link className='disabled-link' disabled href="#">Prix</Nav.Link>
               <Nav.Link className='disabled-link' disabled href="#">FAQ</Nav.Link>
@@ -40,7 +40,7 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
       <div className='section-1'>
         <h1>Git en <span>Afrique</span> 🌍</h1>
 
-        <h2>Nimba est un <b>client git</b> créé au coeur de l'Afrique, qui s'occupe de la communité.</h2>
+        <h2>Nimba est un <b>client git</b> créé au coeur de l'Afrique, qui s'occupe de la communauté.</h2>
 
         <div className='form-container'>
           <p>Nimba est en version alpha, inscrivez-vous pour être tenu au courant.</p>
@@ -65,7 +65,7 @@ const Home = ({ email, errorEmail, handleFormChange, onEmailFormSubmit, isLoadin
                     <Spinner animation="border" role="status" size="sm">
                       <span className="sr-only">Chargement...</span>
                     </Spinner> :
-                    "Je m'inscrire !"
+                    "Je m'inscris !"
                   }
                 </Button>
               </div>
