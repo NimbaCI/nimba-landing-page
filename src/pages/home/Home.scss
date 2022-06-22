@@ -7,6 +7,12 @@
   .nav-container {
     margin: auto;
     width: 95%;
+
+    .navbar-brand {
+      font-size: 2rem;
+    }
+
+    .login-btn {}
   }
 
   .section-1 {
@@ -14,8 +20,9 @@
     padding-bottom: 5rem;
 
     h1 {
-      font-size: 4rem;
+      font-size: 6rem;
       text-align: center;
+      font-weight: 900;
 
       span {
         color: #5FBE5F;
@@ -24,35 +31,29 @@
 
     h2 {
       text-align: center;
-      font-size: 20px;
+      font-size: 1.5rem;
       color: grey;
       margin-top: 1.25rem;
+      margin-bottom: 40px;
     }
 
-    .form-container {
-      margin-top: 1.25rem;
+    .typist-container {
+      display: flex;
+      justify-content: center;
 
-      p {
-        text-align: center;
+      .black-box {
+        margin-top: 50px;
+        background-color: rgb(59, 59, 59);
+        width: 400px;
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        border-radius: 8px;
       }
 
-      .form {
-        width: 700px;
-        display: block;
-        margin: auto;
-
-        .left-input {
-          width: 80%;
-        }
-
-        .right-button {
-          width: 20%;
-          text-align: right;
-
-          button {
-            width: 90%;
-          }
-        }
+      .code {
+        font-size: 50px;
+        color: white;
       }
     }
   }
@@ -74,7 +75,8 @@
 
       h2 {
         color: #fff;
-        font-size: 2rem;
+        font-size: 3.75rem;
+        font-weight: 900;
       }
 
       .intro {
@@ -96,14 +98,31 @@
           .inner-column {
             display: inline-block;
 
+            &.left-column {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            }
+
             .icon {
               width: 50px;
+              height: 53px;
               text-align: center;
               background-color: #5FBE5F;
               border-radius: 8px;
               padding: 4px;
               color: white;
               font-size: 30px;
+            }
+
+            .version {
+              background-color: #a1a1a1;
+              color: white;
+              font-size: 12px;
+              width: 25px;
+              text-align: center;
+              border-radius: 4px;
+              margin-top: 5px;
             }
 
             h3, p {
@@ -127,82 +146,6 @@
 
   .section-3 {
     background-color: #264726;
-
-    .section-3-content {
-      background-color: #152715;
-
-      .grid {
-        display: grid;
-        margin: auto;
-        width: 95%;
-        grid-gap: 2rem;
-
-        .first-grid-components {
-          display: grid;
-        }
-
-        .grid-item {
-          display: grid;
-          grid-template-columns: repeat(2,minmax(0,1fr));
-        }
-
-        h4 {
-          color: #747c74;
-          font-size: .875rem;
-        }
-
-        ul {
-          list-style: none;
-          padding-left: 0;
-
-          li {
-            color: #bebebe;
-            padding-top: 15px;
-
-            &:hover {
-              color: #f3f3f3;
-              cursor: not-allowed;
-            }
-
-            &.help-community {
-              color: #9ea173;
-            }
-
-            a {
-              color: #bebebe;
-              text-decoration: none;
-
-              &:hover {
-                color: #f3f3f3;
-              }
-            }
-          }
-        }
-
-        p {
-          color: #bebebe;
-        }
-
-        .newsletter-form {
-          width: 100%;
-          display: block;
-          margin: auto;
-
-          .left-input {
-            width: 70%;
-          }
-
-          .right-button {
-            width: 30%;
-            text-align: right;
-
-            button {
-              width: 90%;
-            }
-          }
-        }
-      }
-    }
   }
 
   .footer {
@@ -236,32 +179,43 @@
       width: 95% !important;
 
       h1 {
-        font-size: 3rem;
+        font-size: 2.25rem;
         margin-top: 1em;
       }
 
-      .form-container {
-        .form {
-          width: 95% !important;
+      h2 {
+        font-size: 1.125rem;
+      }
 
-          .left-input {
-            width: 100% !important;
-          }
+      .typist-container {
+        .black-box {
+          margin-top: 50px;
+          background-color: rgb(59, 59, 59);
+          width: 300px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          border-radius: 8px;
+        }
 
-          .right-button {
-            width: 100% !important;
-
-            button {
-              width: 100% !important;
-              margin-top: 1em;
-            }
-          }
+        .code {
+          font-size: 30px;
+          color: white;
         }
       }
     }
 
     .section-2 {
       .section-2-content {
+        h2 {
+          font-size: 2.25rem;
+        }
+
+        .intro {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
         .advantages {
           width: 95%;
         }
