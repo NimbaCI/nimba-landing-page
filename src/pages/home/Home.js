@@ -19,7 +19,12 @@ const Home = ({ toggleShowToast, showToast }) => {
     <div id='home-page'>
       <div className='nav-container'>
         <Navbar collapseOnSelect expand="lg">
-          <Navbar.Brand href="/">⛰ Nimba</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <div className="brand-container">
+              <span>⛰ Nimba</span>
+              <span className='version'>v1</span>
+            </div>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">

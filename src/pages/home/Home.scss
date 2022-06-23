@@ -12,7 +12,23 @@
       font-size: 2rem;
     }
 
-    .login-btn {}
+    .brand-container {
+      display: flex;
+      align-items: center;
+
+      .version {
+        display: block;
+        background-color: #a1a1a1;
+        color: white;
+        font-size: 12px;
+        width: 25px;
+        height: 18px;
+        text-align: center;
+        border-radius: 4px;
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+    }
   }
 
   .section-1 {
