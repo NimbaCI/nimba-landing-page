@@ -1,1 +1,18 @@
-{}
+{
+  "translation": {
+    "login": "Connexion",
+    "title": "La plateforme <span>GIT</span> <br/> la plus avancée <br/> d'<span>Afrique</span>.",
+    "subtitle-1": "Nimba est un <b>client git</b> créé au coeur de l'Afrique, qui s'occupe de la communauté.",
+    "subtitle-2": "Un cadeau de l'Afrique pour le monde",
+    "section-2-intro": "La plateforme git la plus avancée du continent",
+    "section-2-migr-github-title": "Migration depuis GitHub ou Gitlab",
+    "section-2-migr-github-description": "Chez Nimba, nous comprenons que vous utilisiez d'autres plateformes parce qu'elles fonctionnent très bien, mais aussi parce que vous n'aviez pas le choix! Maintenant que vous avez le choix, il est temps de nous faire confiance.",
+    "section-2-host-title": "Hébergez votre projet comme partout ailleurs",
+    "section-2-host-description": "Nous voulions vraiment créer une solution qui ne donne pas l'impression à nos utilisateurs de perdre en performance en utilisant un service africain, donc Nimba est aussi puissant et rapide que n'importe quel autre client Git.",
+    "section-2-community-title": "Nous redonnons à la communauté",
+    "section-2-community-description": "Nimba s'est engagé à aider la communauté ici en Afrique. Le service de base est gratuit, mais si vous avez besoin de plus et décidez de devenir Premium, 50% de votre cotisation sera utilisé pour éduquer la communauté sur la technologie.",
+    "section-2-integration-title": "Connectez-vous avec vos services préférés",
+    "section-2-integration-description": "Vous utilisez Trello ? Slack ? Heroku ? D'autres ? Nimba vous permet de vous connecter à vos outils de productivité ou technologiques préférés et de mieux gérer vos projets.",
+    "done-in": "Fait avec 🧡 depuis Abidjan."
+  }
+}

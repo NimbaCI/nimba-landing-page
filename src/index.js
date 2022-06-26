@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
+import { initReactI18next } from 'react-i18next';
 
 import HomePage from './pages/home';
 
@@ -11,16 +13,15 @@ import common_en from './intl/en.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 
-i18next.init({
-  interpolation: { escapeValue: false },  // React already does escaping
-  lng: 'fr',                              // language to use
+i18next.use(initReactI18next).use(LanguageDetector).init({
+  interpolation: { escapeValue: false },
+  fallbackLng: 'en',
   resources: {
-    fr: {
-      common: common_fr,
-    },
-    en: {
-      common: common_en,
-    },
+    fr: common_fr,
+    en: common_en,
+  },
+  react: {
+    transKeepBasicHtmlNodesFor: ['br', 'strong', 'i', 'span', 'b'],
   },
 });
 

@@ -13,8 +13,11 @@ import { faToolbox } from '@fortawesome/free-solid-svg-icons/faToolbox';
 
 import './Home.scss';
 import Typist from 'react-typist';
+import { useTranslation } from 'react-i18next';
 
 const Home = ({ toggleShowToast, showToast }) => {
+  const { t, i18n } = useTranslation();
+
   return (
     <div id='home-page'>
       <div className='nav-container'>
@@ -31,7 +34,7 @@ const Home = ({ toggleShowToast, showToast }) => {
             </Nav>
             <Nav>
               <Nav.Link className="login-btn" href="https://app.nimba.ci/login">
-                <Button variant="success" type="button">Connexion</Button>
+                <Button variant="success" type="button">{t('login')}</Button>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
@@ -39,9 +42,9 @@ const Home = ({ toggleShowToast, showToast }) => {
       </div>
 
       <div className='section-1'>
-        <h1>La plateforme <span>GIT</span> <br/> la plus avancée <br/> d'<span>Afrique</span>.</h1>
+        <h1>{t('title.part-1')} <br /> <span>GIT</span> {t('title.part-2')} <br /> <span>{t('title.part-3')}</span></h1>
 
-        <h2>Nimba est un <b>client git</b> créé au coeur de l'Afrique, qui s'occupe de la communauté.</h2>
+        <h2>{t('subtitle-1')}</h2>
 
         <div className="typist-container">
           <div className="black-box">
@@ -61,9 +64,9 @@ const Home = ({ toggleShowToast, showToast }) => {
         </svg>
 
         <div className='section-2-content'>
-          <h2>Un cadeau de l'Afrique pour le monde</h2>
+          <h2>{t('subtitle-2')}</h2>
 
-          <p className='intro'>La plateforme git la plus avancée du continent</p>
+          <p className='intro'>{t('section-2-intro')}</p>
 
           <div className='advantages'>
             <Row>
@@ -75,8 +78,8 @@ const Home = ({ toggleShowToast, showToast }) => {
                   <span className='version'>v2</span>
                 </div>
                 <div className='inner-column'>
-                  <h3>Migration depuis GitHub ou Gitlab</h3>
-                  <p>Chez Nimba, nous comprenons que vous utilisiez d'autres plateformes parce qu'elles fonctionnent très bien, mais aussi parce que vous n'aviez pas le choix! Maintenant que vous avez le choix, il est temps de nous faire confiance.</p>
+                  <h3>{t('section-2-migr-github-title')}</h3>
+                  <p>{t('section-2-migr-github-description')}</p>
                 </div>
               </Col>
               <Col sm='6' className='advantages-col'>
@@ -87,8 +90,8 @@ const Home = ({ toggleShowToast, showToast }) => {
                   <span className='version'>v1</span>
                 </div>
                 <div className='inner-column'>
-                  <h3>Hébergez votre projet comme partout ailleurs</h3>
-                  <p>Nous voulions vraiment créer une solution qui ne donne pas l'impression à nos utilisateurs de perdre en performance en utilisant un service africain, donc Nimba est aussi puissant et rapide que n'importe quel autre client Git.</p>
+                  <h3>{t('section-2-host-title')}</h3>
+                  <p>{t('section-2-host-description')}</p>
                 </div>
               </Col>
             </Row>
@@ -101,8 +104,8 @@ const Home = ({ toggleShowToast, showToast }) => {
                   <span className='version'>v1</span>
                 </div>
                 <div className='inner-column'>
-                  <h3>Nous redonnons à la communauté</h3>
-                  <p>Nimba s'est engagé à aider la communauté ici en Afrique. Le service de base est gratuit, mais si vous avez besoin de plus et décidez de devenir Premium, 50% de votre cotisation sera utilisé pour éduquer la communauté sur la technologie.</p>
+                  <h3>{t('section-2-community-title')}</h3>
+                  <p>{t('section-2-community-description')}</p>
                 </div>
               </Col>
               <Col sm='6' className='advantages-col'>
@@ -113,8 +116,8 @@ const Home = ({ toggleShowToast, showToast }) => {
                   <span className='version'>v3</span>
                 </div>
                 <div className='inner-column'>
-                  <h3>Connectez-vous avec vos services préférés</h3>
-                  <p>Vous utilisez Trello ? Slack ? Heroku ? D'autres ? Nimba vous permet de vous connecter à vos outils de productivité ou technologiques préférés et de mieux gérer vos projets.</p>
+                  <h3>{t('section-2-integration-title')}</h3>
+                  <p>{t('section-2-integration-description')}</p>
                 </div>
               </Col>
             </Row>
@@ -131,7 +134,7 @@ const Home = ({ toggleShowToast, showToast }) => {
       <div className='footer'>
         <div className='footer-content'>
           <div>Copyright © Nimba | All right reserved.</div>
-          <div>Fait avec 🧡 depuis Abidjan.</div>
+          <div>{t('done-in')}</div>
         </div>
       </div>
 
