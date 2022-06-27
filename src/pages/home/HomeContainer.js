@@ -14,19 +14,19 @@ const HomeContainer = () => {
       name: "Bit by bit Patron",
       price: "1",
       advantages: ["Infinite gratitude"],
-      link: "https://www.patreon.com/join/florianadonis",
+      link: "https://www.patreon.com/join/florianadonis/checkout?rid=8810437&cadence=1",
     },
     {
       name: "Show-some-love Patron",
       price: "5",
       advantages: ["Infinite gratitude", "Patron-only decision power"],
-      link: "https://www.patreon.com/join/florianadonis",
+      link: "https://www.patreon.com/join/florianadonis/checkout?rid=8810446&cadence=1",
     },
     {
       name: "True-believer Patron",
       price: "15",
       advantages: ["Infinite gratitude", "Patron-only decision power", "Public thanks on the landing page"],
-      link: "https://www.patreon.com/join/florianadonis",
+      link: "https://www.patreon.com/join/florianadonis/checkout?rid=8810447&cadence=1",
     },
   ];
 

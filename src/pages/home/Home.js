@@ -131,7 +131,7 @@ const Home = ({ toggleShowToast, showToast, tiers }) => {
         </svg>
 
         <div className='section-3-content'>
-          <h2>{t('subtitle-3')} <span>Patreon</span></h2>
+          <h2>{t('subtitle-3')} <a href="https://www.patreon.com/join/florianadonis">Patreon</a></h2>
 
           <p className='intro'>{t('section-3-intro')}</p>
 
