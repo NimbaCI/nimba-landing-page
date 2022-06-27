@@ -9,6 +9,26 @@ const HomeContainer = () => {
   const [errorEmail, setErrorEmail] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const tiers = [
+    {
+      name: "Bit by bit Patron",
+      price: "1",
+      advantages: ["Infinite gratitude"],
+      link: "https://www.patreon.com/join/florianadonis",
+    },
+    {
+      name: "Show-some-love Patron",
+      price: "5",
+      advantages: ["Infinite gratitude", "Patron-only decision power"],
+      link: "https://www.patreon.com/join/florianadonis",
+    },
+    {
+      name: "True-believer Patron",
+      price: "15",
+      advantages: ["Infinite gratitude", "Patron-only decision power", "Public thanks on the landing page"],
+      link: "https://www.patreon.com/join/florianadonis",
+    },
+  ];
 
   useEffect(() => {
     pingServer();
@@ -47,6 +67,7 @@ const HomeContainer = () => {
       isLoading={isLoading}
       toggleShowToast={toggleShowToast}
       showToast={showToast}
+      tiers={tiers}
       handleFormChange={handleFormChange}
       onEmailFormSubmit={onEmailFormSubmit}
     />

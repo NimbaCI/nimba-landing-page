@@ -162,6 +162,76 @@
 
   .section-3 {
     background-color: #264726;
+    position: relative;
+    text-align: center;
+
+    .section-3-content {
+      background-color: #152715;
+      color: #152715;
+
+      h2 {
+        color: #fff;
+        font-size: 3.75rem;
+        font-weight: 900;
+
+        span {
+          color: rgb(255, 66, 77);
+        }
+      }
+
+      .intro {
+        color: #bebebe;
+        font-size: 22px;
+        margin-bottom: 5rem;
+      }
+
+      .tiers-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10em 5rem 10em;
+
+        .tier-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border: #747c74;
+          border-radius: 8px;
+          background-color: white;
+          width: 320px;
+          padding: 2em;
+
+          h3 {
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 2em;
+          }
+
+          h4, p {
+            color: #498e49;
+          }
+
+          h4 {
+            font-weight: bold;
+          }
+
+          ul {
+            padding-inline-start: 15px;
+            margin-top: 2em;
+            text-align: left;
+
+            li {
+              font-size: 15px;
+              color:rgb(88, 88, 88);
+            }
+          }
+
+          .join-btn {
+            background-color: #5FBE5F;
+            border-color: #5FBE5F;
+          }
+        }
+      }
+    }
   }
 
   .footer {
@@ -240,25 +310,23 @@
 
     .section-3 {
       .section-3-content {
-        .grid {
-          width: 95%;
+        h2 {
+          font-size: 2.25rem;
+        }
 
-          .newsletter-form {
-            width: 95%;
-            margin: auto;
+        .intro {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
 
-            .left-input {
-              width: 100%;
-            }
+        .tiers-container {
+          padding: 0;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
 
-            .right-button {
-              width: 100%;
-              margin-top: 1em;
-
-              button {
-                width: 100%;
-              }
-            }
+          .tier-container {
+            margin-bottom: 5em;
           }
         }
       }

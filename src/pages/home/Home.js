@@ -15,7 +15,7 @@ import './Home.scss';
 import Typist from 'react-typist';
 import { useTranslation } from 'react-i18next';
 
-const Home = ({ toggleShowToast, showToast }) => {
+const Home = ({ toggleShowToast, showToast, tiers }) => {
   const { t, i18n } = useTranslation();
 
   return (
@@ -129,6 +129,28 @@ const Home = ({ toggleShowToast, showToast }) => {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path fill="#152715" fill-opacity="1" d="M0,256L80,234.7C160,213,320,171,480,170.7C640,171,800,213,960,240C1120,267,1280,277,1360,282.7L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
         </svg>
+
+        <div className='section-3-content'>
+          <h2>{t('subtitle-3')} <span>Patreon</span></h2>
+
+          <p className='intro'>{t('section-3-intro')}</p>
+
+          <div className="tiers-container">
+            {tiers.map(tier => (
+              <div className='tier-container'>
+                <h3>{tier.name}</h3>
+                <h4>{tier.price} €</h4>
+                <p>{t("per-month")}</p>
+                <ul>
+                  {tier.advantages.map(advantage => (
+                    <li>{advantage}</li>
+                  ))}
+                </ul>
+                <Button className='join-btn' href={tier.link}>{t("donate")}</Button>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className='footer'>
